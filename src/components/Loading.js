@@ -5,7 +5,7 @@ function Loading() {
   return (
     <View>
       <Text style={{ textAlign: 'center' }}>
-        <ActivityIndicator size='large' />
+        <ActivityIndicator size='large' color='red'/>
       </Text>
     </View>
   )

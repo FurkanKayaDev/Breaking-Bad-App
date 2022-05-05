@@ -16,7 +16,6 @@ function Detail({ route }) {
     useEffect(() => {
         dispatch(fetchDetails(char_id));
     }, [char_id])
-
     if (status === 'failed') {
         return <Error message={error} />
     }
@@ -37,7 +36,6 @@ function Detail({ route }) {
                         </>
                     )}
                 </View>
-
             )}
         </View>
     )

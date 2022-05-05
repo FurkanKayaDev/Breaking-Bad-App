@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
-import { fetchCharacters } from '../Redux/characterSlice/characterSlice';
+import { fetchCharacters } from '../../Redux/characterSlice/characterSlice';
 import styles from './characters.styles'
-import Loading from '../components/Loading';
-import Error from '../components/Error';
+import Loading from '../../components/Loading'
+import Error from '../../components/Error';
 
 function Characters({ navigation }) {
     const characters = useSelector((state) => state.characters.items);
@@ -26,7 +26,6 @@ function Characters({ navigation }) {
     if (status === 'failed') {
         return <Error message={error} />
     }
-
     return (
         <View style={{ backgroundColor: '#e0e0e0' }}>
             <ScrollView>
@@ -37,7 +36,8 @@ function Characters({ navigation }) {
                                 <Image source={{ uri: character.img }} style={styles.img} />
                                 <Text style={styles.text}>{character.name}</Text>
                             </TouchableOpacity>
-                        </View>)}
+                        </View>
+                    )}
                 </View>
                 {status === 'loading' && <Loading />}
                 {hasNextPage && status !== 'loading' && (
@@ -50,5 +50,4 @@ function Characters({ navigation }) {
         </View>
     )
 }
-
 export default Characters

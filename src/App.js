@@ -1,10 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaView, StyleSheet, Text, View, } from 'react-native';
 import Characters from './pages/Characters';
-import Detail from './pages/Detail/Detail';
-
+import Detail from './pages/Detail';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -17,9 +15,4 @@ const App = () => {
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-
-});
-
 export default App;

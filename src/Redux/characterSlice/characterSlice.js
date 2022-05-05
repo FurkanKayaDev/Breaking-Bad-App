@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 const api = 'https://www.breakingbadapi.com/api'
-
 const char_limit = 12;
 
 export const fetchCharacters = createAsyncThunk('characters/getCharacters', async (page) => {
@@ -26,7 +25,6 @@ export const characterSlice = createSlice({
             state.items = [...state.items, ...action.payload];
             state.status = 'succeeded';
             state.page += 1;
-
             if (action.payload.length < 12) {
                 state.hasNextPage = false;
             }
