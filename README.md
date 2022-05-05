@@ -12,6 +12,7 @@
 * Global state
 * Loading ve Error componentları
 * Asenktron yapı
+* Veriyi bütün olarak değil parça parça ekleme 
 
 https://user-images.githubusercontent.com/103508575/167022095-9f6456fc-5a43-479a-b06f-f8224ec8085a.mp4
 
